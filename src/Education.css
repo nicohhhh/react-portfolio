@@ -1,0 +1,67 @@
+/* src/Education.css */
+
+/* 1. 整个版块的样式 */
+.education-section {
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 30px; /* 和下面的项目经验拉开距离 */
+}
+
+/* 2. 版块的标题 (教育背景, 项目经验) */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 3. 教育卡片的“容器” (我们用 Flexbox 让它们并排) */
+.education-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* 允许换行 */
+}
+
+/* 4. 单个教育卡片 (和 .card 样式很像) */
+.edu-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  width: 320px; /* 宽度可以自己调 */
+  display: flex; /* !! 关键：让 Logo 和文字并排 */
+  align-items: center; /* 垂直居中 */
+  gap: 20px; /* Logo 和文字的间距 */
+}
+
+/* 5. !! 关键：校徽 Logo 的样式 !! */
+.edu-logo {
+  width: 80px;  /* 固定宽度 */
+  height: 80px; /* 固定高度 */
+  object-fit: contain; /* 保证 Logo 不会变形 */
+  border-radius: 8px; /* 给 Logo 一点小圆角 */
+  flex-shrink: 0; /* 防止 Logo 在空间不够时被压缩 */
+}
+
+.edu-info {
+  /* 文字信息区域自动填满剩余空间 */
+  flex-grow: 1;
+}
+
+.edu-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.edu-info p {
+  font-size: 14px;
+  color: #333;
+  margin: 4px 0 0;
+}
+
+.edu-info .edu-dates {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+}

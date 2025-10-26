@@ -1,5 +1,5 @@
 // src/App.jsx (最终交互版本)
-
+import Education from './Education.jsx'
 // !! 1. 导入 { useState }
 import React, { useState } from 'react'
 
@@ -55,8 +55,9 @@ function App() {
 
   return (
     <>
-      <h1>陈浩的项目经验</h1>
-
+      <h1>陈浩的简历</h1>
+      <Education />
+      <h2 className="section-title">项目经验</h2>
       <div className="filter-buttons">
         
         {/* !! 4. 按钮们现在“活”了 !! */}
