@@ -1,44 +1,9 @@
 // src/App.jsx (最终交互版本)
+import { allProjects } from './data.js'
 import Education from './Education.jsx'
+import Skills from './Skills.jsx'
 // !! 1. 导入 { useState }
 import React, { useState } from 'react'
-
-// (我们的“数据库”保持不变)
-const allProjects = [
-    {
-        title: '运营管理部经理助理',
-        subtitle: '安徽省中奥重工机械有限公司',
-        description: '协助公司从B2B模式向线上线下融合转型，参与官网与1688平台建设、品牌推广及数据化运营。',
-        tags: [
-            { name: 'B2B转型', class: 'tag-blue' },
-            { name: '官网建设', class: 'tag-green' },
-            { name: '数据化运营', class: 'tag-purple' }
-        ],
-        category: '运营管理'
-    },
-    {
-        title: '项目助理',
-        subtitle: '中国农业银行江宁支行',
-        description: '负责客户接待与业务引导，协助办理基础银业务并推广数字化金融产品。',
-        tags: [
-            { name: '客户接待', class: 'tag-green' },
-            { name: '数字化金融', class: 'tag-orange' }
-        ],
-        category: '金融服务'
-    },
-    {
-        title: '四旋翼无人机研究项目',
-        subtitle: '上海无人机研究项目',
-        description: '组装并测试可正常运行的无人机，协助排查性能，并负责视频剪辑与项目展示。',
-        tags: [
-            { name: '硬件组装', class: 'tag-purple' },
-            { name: '性能测试', class: 'tag-blue' },
-            { name: '视频剪辑', class: 'tag-green' }
-        ],
-        category: '技术研究'
-    }
-];
-
 
 function App() {
 
@@ -57,6 +22,7 @@ function App() {
     <>
       <h1>陈浩的简历</h1>
       <Education />
+      <Skills />
       <h2 className="section-title">项目经验</h2>
       <div className="filter-buttons">
         

@@ -65,3 +65,10 @@
   color: #666;
   margin-top: 8px;
 }
+/* src/Education.css (在底部添加) */
+
+/* 让卡片链接继承父级颜色，并去掉下划线 */
+.edu-card, .edu-card:hover {
+  text-decoration: none;
+  color: inherit;
+}

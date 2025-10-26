@@ -1,23 +1,25 @@
 // src/Education.jsx
-
+import { Link } from 'react-router-dom'
 import React from 'react'
 import './Education.css' // 导入这个组件专属的 CSS 样式
 
 // 1. 我们把教育背景的数据，也做成一个数组
 const educationData = [
   {
+    id: 'ntu', // <-- !! 新增 !!
     school: '南洋理工大学',
     degree: '理学硕士',
     major: '项目管理',
     dates: '2025.08 - 目前',
-    logoUrl: '/ntu.png' // <-- 看！这就是 public 文件夹里的图片路径
+    logoUrl: '/ntu.png'
   },
   {
+    id: 'warwick', // <-- !! 新增 !!
     school: '华威大学',
     degree: '理学学士',
     major: '计算机科学与商业研究',
     dates: '2022.09 - 2025.06',
-    logoUrl: '/warwick.png' // <-- 另一个图片路径
+    logoUrl: '/warwick.png'
   }
 ];
 
@@ -33,7 +35,7 @@ function Education() {
       <div className="education-container">
         {/* 4. 和项目卡片一模一样的 .map() 逻辑！ */}
         {educationData.map((edu) => (
-          <div key={edu.school} className="edu-card">
+         <Link key={edu.school} to={`/school/${edu.id}`} className="edu-card">
             
             {/* 5. !! 关键：显示校徽 !! */}
             <img 
@@ -47,7 +49,7 @@ function Education() {
               <p>{edu.degree} - {edu.major}</p>
               <p className="edu-dates">{edu.dates}</p>
             </div>
-          </div>
+         </Link>
         ))}
       </div>
     </section>

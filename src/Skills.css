@@ -1,0 +1,50 @@
+/* src/Skills.css */
+
+/* 1. 技能版块的容器 (和 Education.css 里的很像) */
+.skills-section {
+  width: 100%;
+  /* 我们从 App.jsx 的总标题那里借用 section-title 样式 */
+  /* 所以这里只需要一点外边距 */
+  margin-bottom: 30px; 
+}
+
+/* 2. 技能卡片的“容器” */
+.skills-container {
+  display: flex;
+  justify-content: center; /* 居中 */
+  flex-wrap: wrap; /* 允许换行 */
+  gap: 20px; /* 卡片之间的间距 */
+
+  /* 限制最大宽度，让它在大屏幕上也保持居中 */
+  max-width: 900px; /* 你可以调整这个数值 */
+  margin: 0 auto; /* 水平居中 */
+}
+
+/* 3. 单个技能卡片 */
+.skill-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  
+  /* !! Flexbox 魔法：
+    flex-basis 告诉卡片“你最好是 250px 宽”
+    flex-grow 告诉卡片“如果有多余空间，你可以变胖”
+    这会让卡片自适应地排列成 N 列！
+  */
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+
+.skill-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #4338ca; /* 和标签一样的蓝色 */
+}
+
+.skill-card p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
