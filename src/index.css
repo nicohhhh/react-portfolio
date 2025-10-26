@@ -1,0 +1,133 @@
+/* 这叫 CSS 注释。
+  这个文件将控制我们网页的所有样式！
+*/
+
+/* 1. 给整个页面设置一个更舒服的字体和背景色 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f4f5f7; /* 给页面一个浅灰色背景，卡片会更突出 */
+    margin: 0; /* 去掉 body 的默认边距 */
+    padding: 0;
+}
+
+/* 2. 居中我们的主标题 */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* 3. 卡片网格/容器 (这就是之前 style 里的 flex 布局) */
+/* 注意：在 CSS 里，我们用 . 来选择一个 "class" */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px; /* 网页左右两边留点空隙 */
+}
+
+/* 4. 单个卡片的样式 (这就是我们之前 style 里的内容!) */
+.card {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* 阴影调淡一点更精致 */
+    margin: 20px;
+}
+
+/* 5. 卡片里的标题和段落 */
+.card h3 {
+    margin-top: 0; /* 去掉 h3 默认的上边距 */
+}
+
+.card .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.card .description {
+    font-size: 14px;
+    color: #333;
+    margin-top: 12px;
+    line-height: 1.5; /* 增加行高，更易读 */
+}
+
+/* 6. 标签的容器 */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+/* 7. 单个标签的“通用”样式 */
+.tag {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* 8. 标签的“专属”颜色 (这就是 "class" 的强大之处!) 
+  我们可以给一个标签两个 class, 比如 class="tag tag-blue"
+*/
+.tag-blue {
+    background-color: #eef2ff;
+    color: #4338ca;
+}
+.tag-green {
+    background-color: #e0f2f1;
+    color: #00796b;
+}
+.tag-purple {
+    background-color: #f3e8ff;
+    color: #7e22ce;
+}
+.tag-orange {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+/* --- 第 6 课新增：筛选按钮样式 --- */
+
+/* 1. 按钮容器 */
+.filter-buttons {
+    display: flex; /* 又是 Flexbox！让按钮横向排列 */
+    justify-content: center; /* 按钮整体居中 */
+    gap: 10px; /* 按钮之间的间隙 */
+    margin-bottom: 30px; /* 和下面的卡片网格拉开距离 */
+}
+
+/* 2. 单个按钮的通用样式 */
+.filter-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit; /* 继承 body 的字体 */
+
+    background-color: #ffffff; /* 默认白色背景 */
+    color: #333; /* 默认深色文字 */
+
+    border: 1px solid #ddd; /* 一个浅灰色边框 */
+    border-radius: 999px; /* 药丸形状 */
+
+    cursor: pointer; /* 鼠标放上去时，显示“小手”图标 */
+
+    transition: all 0.2s ease; /* 一个 0.2 秒的“过渡”动画，让变化更平滑 */
+}
+
+/* 3. 鼠标“悬停” (hover) 在按钮上时的样式 */
+.filter-btn:hover {
+    background-color: #f0f0f0; /* 鼠标放上去时，背景变灰一点 */
+    border-color: #ccc;
+}
+
+/* 4. “激活” (active) 状态的按钮样式 */
+.filter-btn.active {
+    background-color: #4338ca; /* 和我们标签一样的蓝色 */
+    color: #ffffff; /* 白色文字 */
+    border-color: #4338ca; /* 边框也变蓝 */
+}
